@@ -3,9 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>Alisa - One Love💓💓💓</title>
 </head>
 <body>
-    <h1>Hello World</h1>
+
+    <header>
+        <h1>Алисе</h1>
+    </header>
+    <main>
+        <h1 style="font-size: 30px; padding-top: 90px; text-align: center;">Галлерея любимых моментов</h1>
+        <h2 style="font-size: 14px; text-align: center;"><strong>❗Нажимай на фотографии❗</strong></h2>
+        <div id="cardsHolder" class="cards_holder"></div>
+
+        <div class="holderQuest">
+            <h1 style="font-size: 30px; text-align: center;">Время для загадок</h1>
+            <button onclick="openModal(`${Rules1}`, `${Rules2}`)" style="font-size: 14px; cursor: pointer;"><strong>Правила(нажми)</strong></button>
+    
+            <button onclick="renderQuest()" class="quest" id="startQuest">
+                НАЧАТЬ
+            </button>
+        </div>
+    </main>
+    <script src="./js/script.js"></script>
 </body>
 </html>
+
+<!-- https://chestvuj.ru/p/zhenschine-s-dnyom-rozhdeniya/ -->

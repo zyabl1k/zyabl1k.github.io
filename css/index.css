@@ -1,0 +1,211 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-pink-75);
+    font-size: 44px;
+    font-family: Calligraphic, sans-serif;
+    font-weight: 600;
+    backdrop-filter: blur(12px);
+    padding: 10px 20px;
+    position: fixed;
+    width: 100vw;
+    z-index: 100;
+    backdrop-filter: blur(5px);
+}
+
+/* Modal */
+
+.modal {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000000c6;
+    z-index: 101;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Rubik', sans-serif;
+  }
+  
+  .modalHolder {
+    background-color: #fff;
+    border-radius: .3rem;
+    z-index: 101;
+    max-width: 85vw;
+    max-height: 55vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .modalContent {
+    color: #000000;
+    font-size: 24px;
+    padding: 10px;
+    overflow-y: auto;
+  }
+  
+  .modalHeader {
+    border-bottom: #000 solid 1px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #000;
+  }
+
+/* Cards */
+
+.cards_holder {
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 20px;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+.cards__single {
+    background: var(--color-white-100);
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 5px 18px rgba(134, 134, 134, 0.6);
+    border: 1px solid var(--color-grey-50);
+    cursor: pointer;
+    text-align: center;
+    -webkit-transition: transform 0.6s;
+    transform-style: preserve-3d;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    position: relative;
+    transition: transform 0.6s;
+    -webkit-transition: transform 0.6s;
+  }
+  
+  .cards__image {
+    text-align: center;
+    width: 100%;
+  }
+  
+  .cards__single.flip {
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+  }
+  
+  .cards__artist,
+  .cards__album {
+    color: #20263f;
+  }
+  
+  .cards__front img {
+    margin: 0;
+    height: 275px;
+  }
+  
+  .cards__album {
+    font-style: italic;
+  }
+  
+  .cards__front,
+  .cards__back {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .cards__front {
+    height: 100%;
+    transform: rotateX(0deg);
+    -webkit-transform: rotateX(0deg);
+    padding: 15px 15px 5px 15px;
+  }
+  
+  .cards__back {
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    position: absolute;
+    text-align: center;
+    right: 0;
+    left: 0;
+    top: 10px;
+    color: #20263f;
+  }
+
+.cards__back h1 {
+    font-size: 22px;
+}
+
+.cards__back p {
+    font-size: 18px;
+}
+
+/* Quest */
+
+.holderQuest {
+    padding-top: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.quest {
+    padding: 14px 16px;
+    background-color: var(--color-pink-100);
+    border-radius: .3rem;
+    color: var(--color-white-100);
+    transition: .1s linear;
+}
+
+.quest:hover {
+    background-color: var(--color-pink-50);
+}
+
+.modalContentQuest {
+    color: #000000;
+    font-size: 24px;
+    padding: 10px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.modalContentQuest input {
+    width: 100%;
+    border: 1px solid var(--color-black-100);
+    padding: 5px 10px;
+    border-radius: .3rem;
+}
+
+.test {
+    background-color: var(--color-pink-100);
+    padding: 5px;
+    color: var(--color-white-100);
+    border-radius: .3rem;
+    transform: .1s linear;
+}
+
+.test:hover {
+    background-color: var(--color-pink-50);
+}
+
+/* Media */
+
+@media(max-width: 500px) {
+    .cards_holder {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .cards__front img {
+        margin: 0;
+        height: 217px;
+      }
+}
