@@ -87,7 +87,7 @@ header {
   
   .cards__image {
     text-align: center;
-    width: 100%;
+    /* width: 100%; */
   }
   
   .cards__single.flip {
